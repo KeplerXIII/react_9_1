@@ -3,16 +3,36 @@ import { NavLink } from 'react-router-dom'
 export const Menu = () => {
   return (
     <nav className='menu'>
-      <NavLink className='menu__item' to='/'>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'menu__item menu__item-active' : 'menu__item'
+        }
+        to='/'
+      >
         Главная
       </NavLink>
-      <NavLink className='menu__item' to='/drift'>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'menu__item menu__item-active' : 'menu__item'
+        }
+        to='/drift'
+      >
         Дрифт-такси
       </NavLink>
-      <NavLink className='menu__item' to='/timeattack'>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'menu__item menu__item-active' : 'menu__item'
+        }
+        to='/timeattack'
+      >
         Time Attack
       </NavLink>
-      <NavLink className='menu__item' to='/forza'>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? 'menu__item menu__item-active' : 'menu__item'
+        }
+        to='/forza'
+      >
         Forza Karting
       </NavLink>
     </nav>
