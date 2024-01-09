@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export const Menu = () => {
   const menuItemClassName = ({ isActive }: { isActive: boolean }) =>
-    isActive ? 'menu__item menu__item-active' : 'menu__item'
+  'menu__item ' + (isActive && 'menu__item-active')
 
   return (
     <nav className='menu'>
